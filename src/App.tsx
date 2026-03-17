@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { siteConfig } from "./config/data";
 import Hero from "./components/Hero";
 import Schedule from "./components/Schedule";
 import Gallery from "./components/Gallery";
@@ -20,7 +21,7 @@ function App() {
             className="wax-seal"
             onClick={() => setIsRevealed(true)}
           >
-            K&M
+            {siteConfig.names.initials}
           </div>
           <p className="font-heading text-xl text-primary tracking-[0.2em] animate-pulse">
             Tap to Reveal

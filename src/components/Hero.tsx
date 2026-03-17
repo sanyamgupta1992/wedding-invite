@@ -16,38 +16,42 @@ export default function Hero() {
             </div>
 
             {/* Content */}
-            <div className="relative z-20 flex flex-col items-center text-center text-white px-4 w-full">
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 1 }}
-                    className="font-body text-xs md:text-sm tracking-[0.4em] uppercase mb-6 text-gold"
-                >
-                    {siteConfig.hero.tagline}
-                </motion.p>
+            <div className="relative z-20 flex flex-col items-center justify-center text-center text-white px-4 w-full h-full pb-32">
+                <div className="flex-1 flex flex-col items-center justify-center pt-24">
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: 1 }}
+                        className="font-body text-xs md:text-sm tracking-[0.4em] uppercase mb-8 text-white/90"
+                    >
+                        {siteConfig.hero.tagline}
+                    </motion.p>
 
-                <motion.h1
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1.5, delay: 1.2, ease: "easeOut" }}
-                    className="font-heading text-5xl md:text-7xl lg:text-9xl text-white mb-8 tracking-wider drop-shadow-xl"
-                >
-                    {siteConfig.names.coupleNames}
-                </motion.h1>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1, delay: 1.5 }}
+                        className="flex flex-col items-center gap-3 drop-shadow-md"
+                    >
+                        <p className="font-heading text-xl md:text-3xl tracking-widest font-light text-white">
+                            {siteConfig.dates.mainWeddingDate}
+                        </p>
+                        <p className="font-body text-sm font-light tracking-widest opacity-90 uppercase text-white/80">
+                            {siteConfig.venue.name}
+                        </p>
+                    </motion.div>
+                </div>
 
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 2 }}
-                    className="flex flex-col items-center gap-3 mt-4"
-                >
-                    <p className="font-heading text-xl md:text-3xl tracking-widest font-light">
-                        {siteConfig.dates.mainWeddingDate}
-                    </p>
-                    <p className="font-body text-sm font-light tracking-widest opacity-90 uppercase">
-                        {siteConfig.venue.name}
-                    </p>
-                </motion.div>
+                <div className="absolute bottom-24 w-full flex justify-center">
+                    <motion.h1
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1.5, delay: 2, ease: "easeOut" }}
+                        className="font-heading text-4xl md:text-6xl text-gold tracking-wider drop-shadow-lg"
+                    >
+                        {siteConfig.names.coupleNames}
+                    </motion.h1>
+                </div>
             </div>
 
             {/* Scroll Indicator */}

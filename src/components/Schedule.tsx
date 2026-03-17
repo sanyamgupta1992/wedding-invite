@@ -43,6 +43,12 @@ export default function Schedule() {
                                 {evt.title}
                             </p>
 
+                            {evt.image && (
+                                <div className="w-48 h-64 rounded-xl overflow-hidden border-2 border-gold/30 mb-6 shadow-md drop-shadow-xl shrink-0">
+                                    <img src={evt.image} alt={evt.title} className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                                </div>
+                            )}
+
                             <h3 className="font-heading text-3xl text-primary text-center mb-4 h-16 flex items-center justify-center">
                                 {evt.eventName}
                             </h3>
